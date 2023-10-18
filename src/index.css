@@ -1,0 +1,83 @@
+/* light mode */
+:root{
+    --background: rgba(235, 235, 235, 1);
+    --background-gradient: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 88%);
+    --text-primary:  rgb(0, 0, 0);
+    --container-background: rgb(255, 255, 255);
+    --navline: rgba(0, 0, 0, 0.2);
+    --border: 0.1px solid #bcbcbc;
+    --navLineHighlight: rgb(255 255 255 / 20%);
+}
+
+
+/* dark mode */
+[data-theme='dark']{
+    --background: rgb(80, 80, 80);
+    --background-gradient: radial-gradient(circle, rgba(116,116,116,1) 0%, rgba(88,88,88,1) 88%);
+    --text-primary:  rgb(255, 255, 255);
+    --container-background:rgba(137 137 137);
+    --navline: rgba(255, 255, 255, 0.2);
+    --border: 0.1px solid #bcbcbc;;
+    transition: 0.5s;
+    
+}
+
+.app{
+    background-color: var(--background);
+    background: var(--background-gradient);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+/* works for tags in any file */
+section{
+    background-color: var(--container-background);
+    transition: 0.3s;
+}
+
+plaintext{
+    color: var(--text-primary);
+}
+
+h2{
+    color: var(--text-primary);
+}
+
+p{
+    color: var(--text-primary);
+}
+
+/* works for id's in any file */
+#bubble{
+    background-color: var(--container-background);
+}
+
+#navLine{
+    color: var(--navline)
+}
+
+#navLineSection{
+    background-color: var(--navline)
+}
+
+#conBorderSlider{
+    border-right: var(--border);
+    border-left: var(--border);
+    border-top: var(--border);
+}
+
+#conBorder{
+    border: var(--border);
+    
+}
+
+#conBorderBack{
+    border-right: var(--border);
+    border-left: var(--border);
+    border-bottom: var(--border);
+}

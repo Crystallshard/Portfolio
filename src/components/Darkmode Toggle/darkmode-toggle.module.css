@@ -1,0 +1,49 @@
+.theLabel{
+    height: 32px;
+    width: 60px;
+    background-color: rgba(181, 184, 255, 1);
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: outset 0px 2px 3px rgba(255, 255, 255, 0.4);
+    left: 1%;
+    cursor: pointer;
+    transition: 1.0s;
+    z-index: 5;
+  }
+  
+  .theLabel::after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    bottom: -19%;
+    left: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgb(0, 0, 0, 0.4), 0 0px 0px 0 rgb(98 98 98);
+    transition: 0.5s;
+  }
+  
+  .checkbox{
+    display: none;
+  }
+  
+  input:checked + .theLabel{
+    background-color: rgba(255, 239, 181, 1);
+    transition: 1.0s;
+  }
+  
+  input:checked + .theLabel::after {
+    left: 54px;
+    transform: translateX(-100%);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  input:checked + .theLabel +.background{
+    background: rgb(80, 80, 80);
+  }

@@ -1,0 +1,101 @@
+.socialMediaContainer{
+    position: relative;
+    bottom: -197px;
+    z-index: 2;
+    left: 29px;
+
+    animation: 0.5s ease-out 0s 1 fadeInAnimation;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-0.5%);
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* svg styles */
+.svgTeal{
+    position: absolute;
+    bottom: 33px;
+    left: 233px;
+    width: 366px;
+    height: 223px;
+    flex-shrink: 0;
+    fill: #81DADA;
+    filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.25));
+    z-index: 2;
+    overflow: hidden;
+    display: block;
+}
+
+.svgGreen{
+    position: absolute;
+    bottom: 33px;
+    left: 207px;
+    width: 366px;
+    height: 223px;
+    flex-shrink: 0;
+    fill: #81dada;
+    z-index: 1;
+    stroke: #7dd647;
+    filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.25));
+    display: block;
+}
+
+.svgRed{
+    border-radius: 94px;
+    background: #DA6666;
+    width: 304px;
+    height: 223px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 33px;
+    left: 185px;
+    z-index: 0;
+    display: block;
+}
+
+/* social media link styles */
+.threeCircles{
+    display: flex;
+    padding: 0px;
+    position: absolute;
+    bottom: 93.6px;
+    left: 225px;
+    z-index: 4;
+}
+
+.circle{
+
+    height: 70px;
+    width: 70px;
+    margin: 0px 5px 0px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    bottom: 25%;
+    left: 14px;
+    stroke: rgb(52, 44, 152);
+    box-shadow: 0 0.6rem 0.3rem -0.4rem hsla(0, 0%, 0%, 0.25);
+    cursor: pointer;
+    transition: all .1s ease-in-out; 
+}
+
+.circle:hover{
+    transform: scale(1.05);
+}
+
+.circle:active{
+    transform: translateY(0.5px);
+}
+
+.image{
+    position: relative;
+    top: 7px;
+    left: 8px;
+}
