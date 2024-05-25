@@ -2,23 +2,27 @@
 :root{
     --background: rgba(235, 235, 235, 1);
     --background-gradient: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 88%);
+    --text-background: rgba(235, 235, 235, 1);
     --text-primary:  rgb(0, 0, 0);
     --container-background: rgb(255, 255, 255);
     --navline: rgba(0, 0, 0, 0.2);
     --border: 0.1px solid #bcbcbc;
     --navLineHighlight: rgb(255 255 255 / 20%);
+    --stars-page-inset: #e5e5e5;
 }
 
 
 /* dark mode */
 [data-theme='dark']{
     --background: rgb(80, 80, 80);
-    --background-gradient: radial-gradient(circle, rgba(116,116,116,1) 0%, rgba(88,88,88,1) 88%);
+    --background-gradient: radial-gradient(circle, rgba(116,116,116,1) 0%, rgb(68, 68, 68) 88%);
+    --text-background: rgb(111 111 111);
     --text-primary:  rgb(255, 255, 255);
     --container-background:rgba(137 137 137);
     --navline: rgba(255, 255, 255, 0.2);
-    --border: 0.1px solid #bcbcbc;;
+    --border: 0.1px solid #bcbcbc;
     transition: 0.5s;
+    --stars-page-inset: #747474;;
     
 }
 
@@ -28,7 +32,7 @@
     height: 100vh;
     width: 100vw;
     z-index: -1;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     top: 0;
     left: 0;
     position: fixed;
@@ -42,6 +46,7 @@ section{
 
 plaintext{
     color: var(--text-primary);
+    margin: 0;
 }
 
 h2{
@@ -55,6 +60,10 @@ p{
 /* works for id's in any file */
 #bubble{
     background-color: var(--container-background);
+}
+
+#textBackground{
+    background-color: var(--text-background);
 }
 
 #navLine{
@@ -72,12 +81,33 @@ p{
 }
 
 #conBorder{
+    border: var(--border); 
+
+}
+
+#borderAndBackground{
+     border: var(--border); 
+     background-color: var(--text-background);
+}
+
+#bottomBorder{
+    border-bottom: var(--border); 
+}
+
+#starsPageInset{
+    background-color: var(--stars-page-inset);
     border: var(--border);
-    
 }
 
 #conBorderBack{
     border-right: var(--border);
     border-left: var(--border);
     border-bottom: var(--border);
+}
+
+@media (max-width: 426px){
+    
+    .app{
+        /* overflow: scroll; */
+    }
 }

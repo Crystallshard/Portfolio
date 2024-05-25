@@ -1,0 +1,360 @@
+.homeBody{
+    height: 100svh;
+    width: 100svw;
+    margin: 0;
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.areaSeperater{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.displayArea{
+    justify-content: space-evenly;
+    /* overflow: scroll; */
+    display: flex;
+    flex-grow: 1;
+    margin: 30px 100px 30px 0px;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    background-color: rgba(255, 199, 0, 1);
+    font-size: 8px;
+    color: white;
+    letter-spacing: 2px;
+    border: 0.1px solid #999999;
+    border-radius: 100px 100px 100px 100px;
+    cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+    animation: 0.5s ease-out 0s 1 _fadeInAnimation_wn1pg_1;
+
+} @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-3%);
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.resume:hover{
+    background-color: rgb(253, 229, 143);
+    transition: 0.2s ease-out;
+}
+
+.resumeText{
+    text-orientation: unset;
+    writing-mode: unset;
+}
+
+.image{
+    position: relative;
+}
+
+/* tablet */
+
+/* nest hub */
+@media(width: 1024px) and (height: 600px){
+
+    .displayArea{
+        margin: 10px 10px 10px 10px;
+    }
+
+}
+
+@media(width: 1024px) and (height: 768px) and (orientation: landscape){
+
+    .displayArea{
+        margin: 10px 10px 10px 10px;
+    }
+
+}
+
+/* surface pro 7 */
+@media(width: 912px) and (height: 1368px){
+    .displayArea{
+        flex-direction: column;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .areaSeperater{
+        flex-direction: row;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .resume{
+        height: 300px;
+        width: unset;
+    }
+
+    .resumeText{
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+    }
+}
+
+@media(width: 820px) and (height: 1180px){
+
+    .displayArea{
+        flex-direction: column;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .areaSeperater{
+        flex-direction: row;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .resume{
+        height: 300px;
+        width: unset;
+    }
+
+    .resumeText{
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+    }
+}
+
+
+/* @media(max-width: 695px){
+
+    .displayArea{
+        margin: 0px 10px 0px 10px;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .areaSeperater{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .resume{
+        width: 220px;
+    }
+
+} */
+
+/* @media(max-width: 767px){
+
+    .profileCardContainer{
+        height: 235px;
+
+        width: 230px;
+    }
+    .profileBackgroundPic{
+        width: 230px;
+        height: 125px;
+    }
+
+    .location, li{
+        padding: 0px 2px 0px 2px;
+    }
+
+    .Name{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+} */
+
+@media(min-width: 695px) and (max-width: 1050px){
+    .displayArea{
+        /* flex-direction: column; */
+        margin: 10px 10px 10px 20px;
+    }
+
+    /* .areaSeperater{
+        flex-direction: row;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .resume{
+        height: 300px;
+        width: unset;
+    }
+
+    .resumeText{
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+    } */
+}
+
+@media(min-width: 695px) and (max-width: 1050px) and (orientation: portrait){
+    .displayArea{
+        flex-direction: column;
+        margin: 10px 10px 10px 20px;
+    }
+
+    .areaSeperater{
+        flex-direction: row;
+        /* margin-right: 10px;
+        margin-left: 10px; */
+    }
+
+    .resume{
+        height: 300px;
+        width: unset;
+    }
+
+    .resumeText{
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+    }
+}
+
+
+
+
+/* 1440 */
+
+
+/* iphone 14 pro max */
+@media(max-width: 695px){
+    .resume{
+        width: 230px;
+        /* margin-bottom: 15px; */
+    }
+
+    /* .homeBody{
+        height: unset;
+    } */
+    .areaSeperater{
+     
+        margin-right: 0px;
+    }
+    .displayArea{
+        overflow: scroll;
+        justify-content: unset;
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+        margin: 0;
+    }
+}
+
+/* iphone 14 pro max */
+@media(max-width: 932px) and (orientation: landscape){
+    .resume{
+        width: 760px;
+        /* margin-bottom: 15px; */
+    }
+
+    .areaSeperater{
+     
+        margin-right: 0px;
+    }
+
+    .displayArea{
+        flex-direction: column;
+        margin: 0px 10px 0px 10px;
+        overflow: scroll;
+        justify-content: unset;
+        align-items: center;
+    }
+}
+
+
+
+/*iphone XR*/
+@media(max-width: 431px){
+    .resume{
+        margin-bottom: 15px;
+        width: 230px;
+    }
+
+    /* .homeBody{
+        height: unset;
+    } */
+    
+    .displayArea{
+        overflow: scroll;
+        justify-content: unset;
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+        margin: 0;
+    }
+}
+
+@media(max-width: 897px) and (orientation: landscape){
+    .resume{
+        width: 680px;
+        /* margin-bottom: 15px; */
+    }
+
+    .areaSeperater{
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .displayArea{
+        flex-direction: column;
+        margin: 0px 10px 0px 10px;
+        overflow: scroll;
+        justify-content: unset;
+        align-items: center;
+    }
+}
+
+/* iphone 12 pro */
+@media(max-width: 845px) and (orientation: landscape){
+    .resume{
+        width: 570px;
+        /* margin-bottom: 15px; */
+    }
+}
+
+/* iphone SE */
+@media(max-width: 376px){
+    .resume{
+        
+        width: 60svw;
+        margin-bottom: 15px;
+    }
+
+    
+
+    /* .homeBody{
+        height: unset;
+    } */
+    .areaSeperater{
+     
+        margin-right: 0px;
+    }
+    .displayArea{
+        overflow: scroll;
+        justify-content: unset;
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+        margin: 0;
+    }
+}
+
+@media(max-width: 668px) and (orientation: landscape){
+    .resume{
+        width: 500px;
+        /* margin-bottom: 15px; */
+    }
+
+    .displayArea{
+        flex-direction: column;
+        margin: 0px 10px 0px 10px;
+        overflow: scroll;
+        justify-content: unset;
+        align-items: center;
+    }
+}
+

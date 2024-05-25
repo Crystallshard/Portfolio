@@ -9,8 +9,11 @@ import {
     image,
     sliderNavBackground,
     sliderButton,
-    sliderButtonCover
+    sliderButtonCover,
+    testing,
 } from "./image-slider.module.css"
+
+/* images */
 import starsBlack from './images/starsShopPage.png';
 import starsWhite from './images/Fixed-Sparkle-star-test2-white.png';
 
@@ -20,6 +23,7 @@ const ImageSlider = () => {
 
     return (
         <>
+        <div className={testing}>
             <div className={container}>
                 <div className={sliderWrapper}>
                     <div className={slider} id="conBorderSlider">
@@ -28,16 +32,16 @@ const ImageSlider = () => {
                             src={starsBlack}
                             placeholder="blurred"
                             layout="fixed"
-                            width={768}
-                            height={531} />
+                        />
                         <img className={image} id="slide-2"
                             alt="Star"
                             src={starsWhite}
                             placeholder="blurred"
                             layout="fixed"
-                            width={768}
-                            height={530} />
+                        />
                     </div>
+                </div>
+                <section className={sliderNavBackground} id="conBorderBack">
                     <div className={sliderNav}>
                         <ul className={sliderNavList}>
                             <li className={sliderNavListItems}>
@@ -50,8 +54,8 @@ const ImageSlider = () => {
                             </li>
                         </ul>
                     </div>
-                    <section className={sliderNavBackground} id="conBorderBack"></section>
-                </div>
+                </section>
+            </div>
             </div>
         </>
     )

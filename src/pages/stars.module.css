@@ -1,0 +1,6 @@
+.starsBody{
+    height: 100svh;
+    width: 100svw;
+    margin: 0;
+    display: flex;
+}

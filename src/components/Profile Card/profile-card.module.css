@@ -1,13 +1,14 @@
-.profileCardContainer{
-    width: 340px;
-    height: 248px;
-    color: white;
-    position: absolute;
-    z-index: 2;
-    left: 207px;
-    top: 166px;
-    border-radius: 0px 0px 90px 90px;
-    border: 0.1px solid #00000033;
+/* container */
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* width: fit-content; */
+   max-width: 530px;
+   width: 71svw;
+    /* top: 16px;
+    left: 200px; */
+    align-items: center;
     animation: 0.5s ease-out 0s 1 fadeInAnimation;
 
 } @keyframes fadeInAnimation {
@@ -21,32 +22,60 @@
     }
 }
 
+.profileCardContainer{
+    max-width: 530px;
+    width: inherit;
+    height: 250px;
+    /* max-height: 250px; */
+    min-height: 200px;
+    color: white;
+    display: flex;
+    /* margin-bottom: 15px; */
+    /* position: absolute; */
+    z-index: 2;
+    /* left: 207px; */
+    /* top: 166px; */
+    /* border-radius: 2rem 2rem 5.5rem 5.5rem; */
+    border-radius: 1rem 5rem 5.5rem 5.5rem;
+    border: 0.1px solid #00000033;
+    
+
+} 
+
 /* element stuff */
 .profileBackgroundPic{
-    width: 340px;
+    width: inherit;
+    max-width: 530px;
     height: 145px;
     /* background-color: rgb(223 223 223); */
-    position: absolute;
-    left: -1px;
-    bottom: 248px;
-    border-radius: 90px 90px 0px 0px;
-    border: 0.1px solid #ffffff33;
+    /* position: relative; */
+    /* left: -1px; */
+    /* bottom: 248px; */
+    border-radius: 5.5rem 5.5rem 0rem 0rem;
+    /* border: 0.1px solid #ffffff33; */
 }
 
 .backgroundPic{
     border-radius: 90px 90px 0px 0px;
+    width: inherit;
+    max-width: 530px;
+    object-fit: cover;
+    object-position: 0% 100%;
+    height: 250px;
+    position: relative;
+    z-index: 0;
 }
 
 .circle{
     height: 110px;
     width: 110px;
     /* background-color: #fff; */
-    border: 4px solid #ffffff33;
+    border: 7px solid #ffffff33;
     border-radius: 50%;
     z-index: 3;
     position: relative;
-    bottom: 32%;
-    left: 34px;
+    bottom: 200px;
+    left: 30px;
     box-shadow: 0 0.6rem 0.5rem -0.5rem hsla(0, 0%, 0%, 0.25)
 }
 
@@ -55,12 +84,14 @@
 }
 
 .highlight{
-    position: relative;
+    /* position: relative;
     left: -17px;
-    top: -50px;
-    width: 36px;
-    height: 3px;
-    transform: rotate(90deg);
+    top: -50px; */
+    margin-top: 50px;
+    width: 3px;
+    bottom: 8px;
+    position: relative;
+    height: 36px;
     background: linear-gradient(90deg, rgb(253, 167, 101) 0%, rgb(255, 204, 116) 50%, rgb(253, 167, 101) 100%);
 }
 
@@ -71,55 +102,81 @@
 }
 
 /* text stuff */
+.infoAndContactContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nameAndTitleContianer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
 .Name{
-    position: relative;
+    /* position: relative;
     bottom: 68px;
-    left: 38px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 4px;
+    left: 38px; */
+    font-size: 21px;
+    /* font-weight: 500; */
+    letter-spacing: 2px;
     margin: 0;
 }
 
 .title{
-    position: relative;
+    /* position: relative;
     bottom: 64px;
-    left: 38px;
+    left: 38px; */
     font-size: 12px;
     letter-spacing: 1px;
-    font-weight: 100;
+    font-weight: 200;
     margin: 0;
 }
 
+.profileStatusBorder{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 89px;
+    /* width: 475px; */
+    border-radius: 3.5rem 3.5rem 3.5rem 3.5rem;
+    border: 0.1px solid #00000033;
+}
+
 .profileStatus{
-    position: relative;
-    height: 100px;
-    width: 264px;
-    bottom: 77px;
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 200;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     text-align: center;
     margin: auto;
+    background: #f2f2f2;
+    height: 89px;
+    /* width: 475px; */
+    border-radius: 3.5rem 3.5rem 3.5rem 3.5rem;
+    align-content: center;
+    display: block;
 }
 
 .location{
-    position: relative;
+    /* position: relative; */
     display: flex;
     list-style: none;
-    top: 53px;
+    /* top: 53px; */
     justify-content: center;
-    margin: auto;
+    margin: 0;
     padding: 0;
     font-weight: 100;
+   
 }
 
 .location li{
     padding: 0px 4px 0px 4px;
     letter-spacing: 1px;
     font-size: 13px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .dot{
@@ -128,17 +185,137 @@
     background-color: #dcdcdc;
     border-radius: 50%;
     position: relative;
-    top: 19px;
+    
+}
+
+/* social media */
+.threeCirclesContainer{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 2rem 2rem 2rem 2rem;
+    border: 1px solid black;
+    height: 48px;
+}
+
+.threeCircles{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-evenly;
+    z-index: 4;
+    height: fit-content;
+    margin: 0;
+}
+
+.circle1{
+
+    height: 40px;
+    width: 40px;
+    margin: 0px 5px 0px;
+    /* background-color: #545454; */
+    border-radius: 50%;
+    display: flex;
+    /* position: relative;
+    bottom: 25%; */
+    /* left: 14px; */
+    stroke: rgb(52, 44, 152);
+    /* box-shadow: inset 0 0rem 0.2rem 0.2rem hsla(0, 0%, 0%, 0.25); */
+    cursor: pointer;
+    transition: all .2s ease-out; 
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.circle2{
+
+    height: 40px;
+    width: 40px;
+    margin: 0px 5px 0px;
+    /* background-color: #545454; */
+    border-radius: 50%;
+    display: flex;
+    /* position: relative;
+    bottom: 25%; */
+    /* left: 14px; */
+    stroke: rgb(52, 44, 152);
+    /* box-shadow: inset 0 0rem 0.2rem 0.2rem hsla(0, 0%, 0%, 0.25); */
+    cursor: pointer;
+    transition: all .2s ease-out;  
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.circle3{
+
+    height: 40px;
+    width: 40px;
+    margin: 0px 5px 0px;
+    /* background-color: #545454; */
+    border-radius: 50%;
+    display: flex;
+    /* position: relative;
+    bottom: 25%; */
+    /* left: 14px; */
+    stroke: rgb(52, 44, 152);
+    
+    cursor: pointer;
+    transition: all .2s ease-out; 
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.circle1:hover{
+    /* background-color: #479ef5; */
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0rem 0.2rem 0.2rem #479ef5e2; */
+    transform: translateY(-1.5px);
+    
+}
+
+.circle2:hover{
+    /* background-color: #005ebe; */
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0rem 0.2rem 0.2rem #005fbee2; */
+    transform: translateY(-1.5px);
+}
+
+.circle3:hover{
+    /* background-color: #a845ff; */
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0rem 0.2rem 0.2rem #a845ffe2; */
+    transform: translateY(-1.5px);
+}
+
+
+
+.image:active{
+    transform: translateY(0.5px);
+}
+
+.image{
+    filter: contrast(0.1);
+}
+
+.image:hover{
+    filter: none;
+   
 }
 
 /* resume styles */
 .resume{
-    width: 295px;
+    width: 430px;
     height: 30px;
     background-color: rgba(255, 199, 0, 1);
-    position: absolute;
+    /* position: absolute;
     left: 231px;
-    top: 429px;
+    top: 429px; */
     font-size: 17px;
     color: white;
     letter-spacing: 12px;
@@ -146,20 +323,396 @@
     border-radius: 100px 100px 100px 100px;
     cursor: pointer;
     font-family: 'Barlow Condensed', sans-serif;
+}
 
-    animation: 0.5s ease-out 0s 1 rasumeFadeInAnimation;
-} @keyframes rasumeFadeInAnimation {
-    0% {
-        opacity: 0;
-        transform: translateX(-3%);
-    }
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
+.infoContainter{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    /* min-height: 250px; */
+    padding-top: 27px;
+    padding-bottom: 10px;
+    padding-left: 21px;
+    padding-right: 24px;
+    position: relative;
+    z-index: 1;
+    justify-content: space-evenly;
+}
+
+/* media querys */
+
+/* container media query */
+/* @media(max-height: 600px){
+    .profileBackgroundPic{
+        height: 95px;
     }
 }
 
-.resume:hover{
-    background-color: rgb(253, 229, 143);
-    transition: 0.2s ease-out;
+
+@media(max-width: 2560px){
+    .profileCardContainer{
+        height: 35svh;
+    }
+} */
+
+/* tablet */
+
+/* @media(width: 1024px) and (height: 600px){
+    .profileBackgroundPic{
+        height: 100px;
+    }
+
+    .circle{
+        bottom: 75%;
+    }
+} */
+
+/* surface pro 7 */
+/* @media(width: 912px) and (height: 1368px){
+    .profileCardContainer{
+        width: 475px;
+        height: unset;
+    }
+    .profileBackgroundPic{
+        width: 475px;
+    }
+} */
+
+/* ipad air */
+/* @media(width: 820px) and (height: 1180px){
+
+    .profileCardContainer{
+        height: unset;
+        width: 385px;
+    }
+
+    .profileBackgroundPic{
+        width: 385px;
+        height: 125px;
+    }
 }
+
+@media(min-width: 801px) and (max-width: 1050px) and (orientation: portrait){
+
+    .profileCardContainer{
+        height: 200px;
+
+        width: 40svw;
+    }
+    .profileBackgroundPic{
+        width: 40svw;
+        height: 140px;
+    }
+
+    .location, li{
+        padding: 0px 2px 0px 2px;
+    }
+
+    .Name{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(min-width: 685px) and (max-width: 800px){
+
+    .profileCardContainer{
+        height: 200px;
+
+        width: 33svw;
+    }
+    .profileBackgroundPic{
+        width: 33svw;
+        height: 125px;
+    }
+
+    .location, li{
+        padding: 0px 2px 0px 2px;
+    }
+
+    .Name{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 685px){
+.profileCardContainer{
+    height: 20svh;
+    width: 100%;
+}
+.profileBackgroundPic{
+    width: 100%;
+}
+}
+
+@media(max-width: 1030px){
+
+} */
+
+/* iphone 14 pro max */
+/* @media(max-width: 933px) and (orientation: landscape){
+    .profileCardContainer{
+        height: 282px;
+
+        width: 760px;
+    }
+    .profileBackgroundPic{
+        width: 760px;
+        height: 125px;
+    }
+    .container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+} */
+
+/* pixel 7 */
+/* @media(max-width: 916px) and (orientation: landscape){
+    .profileCardContainer{
+        height: 264px;
+        width: 760px;
+    }
+    .profileBackgroundPic{
+        width: 760px;
+        height: 125px;
+    }
+    .container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+} */
+
+/* iphone XR */
+/* @media(max-width: 897px) and (orientation: landscape){
+    .profileCardContainer{
+        height: 266px;
+        width: 680px;
+    }
+    .profileBackgroundPic{
+        width: 680px;
+        height: 125px;
+    }
+    .container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+} */
+
+/* iphone 12 pro */
+/* @media(max-width: 844px) and (orientation: landscape){
+    .profileCardContainer{
+        height: 242px;
+        width: 700px;
+    }
+    .profileBackgroundPic{
+        width: 700px;
+        height: 125px;
+    }
+    .container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+} */
+
+/* samsung galaxy S8+ */
+/* @media(max-width: 740px) and (orientation: landscape){
+
+    .profileBackgroundPic{
+        width: 570px;
+        height: 125px;
+    }
+
+    .profileCardContainer{
+    height: 212px;
+    width: 570px;
+    }
+} */
+
+/* iphone SE */
+/* @media(max-width: 668px) and (orientation: landscape){
+    .profileCardContainer{
+        height: 227px;
+        width: 530px;
+    }
+    .profileBackgroundPic{
+        width: 530px;
+        height: 125px;
+    }
+    .container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+} */
+
+/* @media(max-width: 685px){
+    .container{
+        margin-bottom: 15px;
+    }
+
+    .profileStatus{
+    
+        bottom: 72px;
+        font-size: 10px;
+    }
+
+    .location{
+        top: 52px;
+    }
+    
+    .location li{
+        padding: 0px 2px 0px 2px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    .Name {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        
+        font-size: 10px;
+    }
+
+    .resume{
+        width: 222px;
+        left: 34vw;
+    }
+} */
+
+@media(max-width: 580px){
+ .infoAndContactContainer{
+    flex-direction: column;
+ }
+}
+
+
+/* @media(max-width: 431px){
+    .container{
+        margin-bottom: 15px;
+    }
+
+    .profileCardContainer{
+        width: 245px;
+        height: 250px;
+    }
+
+    .profileBackgroundPic{
+        width: 245px;
+    }
+
+    .profileStatus{
+        width: 172px;
+        bottom: 72px;
+        font-size: 10px;
+    }
+
+    .location{
+        top: 52px;
+    }
+    
+    .location li{
+        padding: 0px 2px 0px 2px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    .Name {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        
+        font-size: 10px;
+    }
+
+    .resume{
+        width: 222px;
+        left: 34vw;
+    }
+} */
+
+
+
+
+/* iphone se & xr & 14 pro max */
+@media(max-width: 431px){
+    .container{
+        width: 65svw;
+        margin-bottom: 15px;
+    }
+
+    .nameAndTitleContianer{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .Name{
+        font-size: 15px;
+    }
+
+    .title{
+        font-size: 10px;
+    }
+
+    .profileCardContainer{
+        /* width: 245px; */
+        border-radius: 3rem 1rem 3.5rem 3.5rem;
+        height: auto;
+        left: 28vw;
+    }
+
+    .infoContainter{
+        height: 250px;
+        padding-left: 12px;
+    padding-right: 12px;
+    }
+
+    .circle{
+        /* bottom: 30svh; */
+        /* bottom: 165px; */
+        left: 0;
+    }
+
+    .profileBackgroundPic{
+        align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .profileStatus{
+        /* width: 172px; */
+        padding: 0px 10px 0px 10px;
+        bottom: 72px;
+        font-size: 10px;
+    }
+
+    .location{
+        top: 52px;
+    }
+    
+    .location li{
+        padding: 0px 2px 0px 2px;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+
+    .resume{
+        width: 60svw;
+        /* left: 32vw; */
+    }
+}
+
+/* @media(max-width: 365px){
+    .profileCardContainer{
+        width: 230px;
+        left: 28vw;
+    }
+
+    .profileBackgroundPic{
+        width: 230px;
+    }
+}  */
